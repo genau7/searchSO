@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">searchSO</string>
+    <string name="app_label">APP LABEL</string>
+    <string name="search_hint">Search StackOverflow</string>
+    <string name="search_title">Search Title</string>
+    <string name="btnSearch">Search</string>
+    <string name="noResults">No results found!</string>
+
+</resources>

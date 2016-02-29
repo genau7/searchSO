@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/mainLayout"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id = "@+id/searchLayout"
+        android:layout_alignParentTop ="true"
+        android:orientation="horizontal">
+
+        <org.droidparts.widget.ClearableEditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id = "@+id/query"
+            android:hint="@string/search_hint"
+            android:paddingLeft="20dp"
+            android:scrollHorizontally="false"
+            android:imeOptions = "flagNoFullscreen"
+            android:layout_weight="3"
+            android:layout_gravity="fill" />
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id = "@+id/btnSearch"
+            android:text="@string/btnSearch"
+            android:layout_marginRight="0dp"
+            android:onClick="btnSearchOnClick"
+            android:src="@android:drawable/ic_menu_search"
+            android:imeOptions = "flagNoFullscreen"  />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/networkError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top|center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:text="ERROR!\nNo internet connection available!"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id = "@+id/resultsFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </FrameLayout>
+
+
+</LinearLayout>
